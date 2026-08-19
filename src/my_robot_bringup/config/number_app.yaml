@@ -1,0 +1,4 @@
+/my_number_publihser:
+  ros__parameters:
+    number: 8
+    timer_period: 3.0

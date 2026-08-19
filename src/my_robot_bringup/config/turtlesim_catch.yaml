@@ -1,0 +1,9 @@
+/turtle_spawner:
+  ros__parameters:
+    spawn_frequency: 1.0
+    object_name: "Piggggy_"
+
+/turtle_controller:
+  ros__parameters:
+    catch_closest_turtle_first: False
+   

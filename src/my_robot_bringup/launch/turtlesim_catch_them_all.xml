@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node">
+    </node>
+    <node pkg="turtlesim_catch_them_all" exec="turtle_spawner">
+        <!-- <param name="spawn_frequency" value="0.5" />
+        <param name="object_name" value="Issac_" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/turtlesim_catch.yaml" />
+    </node>
+    <node pkg="turtlesim_catch_them_all" exec="turtle_controller">
+        <!-- <param name="catch_closest_turtle_first" value= "True" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/turtlesim_catch.yaml" />
+    </node>
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node" />
+    <node pkg="Will_cpp_pkg" exec="turtle_spawner">
+        <!-- <param name="prefix" value="elephant" />
+        <param name="spawn_rate" value="1" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/turtle.yaml" />
+    </node>
+    <node pkg="Will_cpp_pkg" exec="turtle_controller">
+        <!-- <param name="catch_closest_turtle" value="false" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/turtle.yaml" />
+    </node>
+    
+</launch>

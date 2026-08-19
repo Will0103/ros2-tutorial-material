@@ -1,0 +1,24 @@
+<launch>
+    <node pkg="my_py_pkg" exec="robot_news_station" name="robot_news_station_giskard">
+        <!-- <param name="robot_name" value="giskard" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/robot_type.yaml" />
+    </node>
+    <node pkg="my_py_pkg" exec="robot_news_station" name="robot_news_bb8">
+        <!-- <param name="robot_name" value="bb8" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/robot_type.yaml" />
+    </node>
+    <node pkg="my_py_pkg" exec="robot_news_station" name="robot_news_station_daneel">
+        <!-- <param name="robot_name" value="daneel" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/robot_type.yaml" />
+    </node>
+    <node pkg="my_py_pkg" exec="robot_news_station" name="robot_news_station_jander">
+        <!-- <param name="robot_name" value="jander" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/robot_type.yaml" />
+    </node>
+    <node pkg="my_py_pkg" exec="robot_news_station" name="robot_news_station_c3po">
+        <!-- <param name="robot_name" value="c3po" /> -->
+        <param from="$(find-pkg-share my_robot_bringup)/config/robot_type.yaml" />
+    </node>
+    <node pkg="my_py_pkg" exec="smartphone" >
+    </node>
+</launch>

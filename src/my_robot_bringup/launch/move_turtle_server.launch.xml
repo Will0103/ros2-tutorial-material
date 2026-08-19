@@ -1,0 +1,14 @@
+<launch>
+    <let name="turtle_name1" value="cat_1" />
+    <node pkg="Will_cpp_pkg" exec="manual_composition" name="move_turtle_server_$(var turtle_name1)">
+        <param name="prefix" value="$(var turtle_name1)" />
+    </node>
+
+
+    <node pkg="lifecycle_py" exec="lifecycle_node_manager" >
+        <param name="managed_node_names" value="[move_turtle_server_$(var turtle_name1)]" />
+    </node>
+
+
+
+</launch>
